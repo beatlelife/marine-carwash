@@ -21,6 +21,15 @@ details[open] .faq-plus{transform:rotate(45deg)}
 
 html{scroll-behavior:smooth;scroll-padding-top:80px}
 .callbar{display:none}
+@media (max-width:640px){
+ .hdr-in{flex-wrap:nowrap !important;padding:8px 16px !important;gap:12px !important}
+ .hdr-logo{height:30px !important}
+ .hdr-call{display:none !important}
+ .hdr-nav{flex-wrap:nowrap !important;overflow-x:auto;gap:16px !important;font-size:14px !important;white-space:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+ .hdr-nav::-webkit-scrollbar{display:none}
+ .hdr-nav a{padding:12px 0 !important}
+ html{scroll-padding-top:56px}
+}
 @media (max-width:640px){ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;gap:8px;padding:10px 12px;background:#0B1E24} .callbar a{flex:1;text-align:center;padding:14px 0;border-radius:999px;font-weight:700;text-decoration:none;font-family:'Noto Sans KR',sans-serif} body{padding-bottom:72px} }
 </style>
 </head>
@@ -28,17 +37,17 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 <div style="font-family: 'Noto Sans KR', system-ui, sans-serif; color: #0E2A30; background: #ffffff; word-break: keep-all; line-height: 1.6">
 
 <!-- 헤더 -->
-<header style="position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,0.96); border-bottom: 1px solid #E3EEEF">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
-    <a href="#top" aria-label="마린출장세차 홈" style="display: flex; align-items: center"><img src="assets/logo_h.png" alt="마린출장세차 MARINE CAR WASH" style="height: 40px; width: auto"></a>
-    <nav aria-label="주요 메뉴" style="display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 500">
+<header class="hdr" style="position: sticky; top: 0; z-index: 10; background: #ffffff; border-bottom: 1px solid #E3EEEF">
+  <div class="hdr-in" style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+    <a href="#top" aria-label="마린출장세차 홈" style="display: flex; align-items: center"><img src="assets/logo_h.png" class="hdr-logo" alt="마린출장세차 MARINE CAR WASH" style="height: 40px; width: auto"></a>
+    <nav class="hdr-nav" aria-label="주요 메뉴" style="display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 15px; font-weight: 500">
       <a href="#reviews" style="color: #0E2A30; text-decoration: none; padding: 10px 0">고객 후기</a>
       <a href="#how" style="color: #0E2A30; text-decoration: none; padding: 10px 0">진행 방식</a>
       <a href="#price" style="color: #0E2A30; text-decoration: none; padding: 10px 0">요금</a>
       <a href="#area" style="color: #0E2A30; text-decoration: none; padding: 10px 0">서비스 지역</a>
       <a href="#faq" style="color: #0E2A30; text-decoration: none; padding: 10px 0">자주 묻는 질문</a>
     </nav>
-    <a href="tel:01097790871" style="background: #0E2A30; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px">전화 상담 010-9779-0871</a>
+    <a class="hdr-call" href="tel:01097790871" style="background: #0E2A30; color: #ffffff; text-decoration: none; font-weight: 700; font-size: 15px; padding: 12px 20px; border-radius: 999px">전화 상담 010-9779-0871</a>
   </div>
 </header>
 
@@ -54,7 +63,7 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
         <a href="#price" style="border: 1px solid #4A6A70; color: #ffffff; text-decoration: none; font-weight: 500; font-size: 17px; padding: 16px 28px; border-radius: 999px">요금 보기</a>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; margin-top: 48px; max-width: 640px">
-        <div style="border-top: 2px solid #3DBCC2; padding-top: 12px"><div style="font-size: 26px; font-weight: 900">419대</div><div style="font-size: 14px; color: #A9C3C7">지금 관리 중인 차량 (2026.11)</div></div>
+        <div style="border-top: 2px solid #3DBCC2; padding-top: 12px"><div style="font-size: 26px; font-weight: 900">1,272대</div><div style="font-size: 14px; color: #A9C3C7">누적 이용 차량 (2026.11 기준)</div></div>
         <div style="border-top: 2px solid #3DBCC2; padding-top: 12px"><div style="font-size: 26px; font-weight: 900">10억원</div><div style="font-size: 14px; color: #A9C3C7">전문인 배상책임보험</div></div>
         <div style="border-top: 2px solid #3DBCC2; padding-top: 12px"><div style="font-size: 26px; font-weight: 900">첫 달 100%</div><div style="font-size: 14px; color: #A9C3C7">불만족 시 환불 보증</div></div>
         <div style="border-top: 2px solid #3DBCC2; padding-top: 12px"><div style="font-size: 26px; font-weight: 900">직영</div><div style="font-size: 14px; color: #A9C3C7">하청·프랜차이즈 없음</div></div>
